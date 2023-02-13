@@ -13,7 +13,7 @@ providedIn: 'root'
 })
 export class LoginService {
 constructor(private http: HttpClient) { }
-login(username:string,password:string): Observable<any> {
+login(login:login): Observable<any> {
 return this.http.post(AUTH_API + 'signin',login, httpOptions);
 }
 register(user:User): Observable<any> {

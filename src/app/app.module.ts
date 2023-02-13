@@ -13,6 +13,9 @@ import { BookingComponent } from './Component/booking/booking.component';
 import { ContactusComponent } from './Component/contactus/contactus.component';
 import { authInterceptorProviders } from './_auth/auth.interceptors';
 import {HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './Component/dashboard/dashboard.component';
+import { DashboardNavbarComponent } from './Component/dashboard-navbar/dashboard-navbar.component';
+import { UpdateComponent } from './Component/update/update.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +26,10 @@ import {HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     FooterComponent,
     BookingComponent,
-    ContactusComponent
+    ContactusComponent,
+    DashboardComponent,
+    DashboardNavbarComponent,
+    UpdateComponent
   ],
   imports: [
     BrowserModule,

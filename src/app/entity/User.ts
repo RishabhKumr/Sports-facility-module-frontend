@@ -1,16 +1,15 @@
 export class User {
-    
-    address1: string;
-address2: string;
-country: string;
-dob: string;
-email: string;
-panNumber: string;
-password: string;
-state: string;
-city:string;
-username: string;
-role: string;
-mobilenumber: any;
-pincode:string;
-    }
+    username: String;
+    email: string;
+    pan_number: string;
+    mob_number: string;;
+    date_of_birth: string;
+    password: string;
+    address_line_1: string;
+    address_line_2: string;
+    pincode: string;
+    city: string;
+    state: string;
+    country: string;
+    role: string;
+}

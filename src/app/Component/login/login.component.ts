@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { login } from 'src/app/entity/login';
 import { LoginService } from 'src/app/services/login.service';
 import { TokenStorageService } from 'src/app/services/token-storage.service';
 
@@ -9,10 +11,7 @@ import { TokenStorageService } from 'src/app/services/token-storage.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  form: any = {
-    username: null,
-    password: null
-  };
+  form = new login();
   isLoggedIn = false;
   isLoginFailed = false;
   errorMessage = '';
@@ -27,11 +26,9 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  onSubmit(): void {
-    const { username, password } = this.form;
-   console.log(username);
-   console.log(password);
-    this.authService.login(username, password).subscribe(
+  onSubmit(f:NgForm): void {
+    
+    this.authService.login(this.form).subscribe(
       data => {
         this.tokenStorage.saveToken(data.accessToken);
         this.tokenStorage.saveUser(data);
@@ -40,7 +37,7 @@ export class LoginComponent implements OnInit {
         this.isLoggedIn = true;
         
         this.roles = this.tokenStorage.getUser().roles;
-        
+        this.router.navigate(['dashboard']);
         this.reloadPage();
       },
       err => {
