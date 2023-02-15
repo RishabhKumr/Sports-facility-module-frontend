@@ -1,0 +1,43 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url(/assets/wallpaper.jpg);
+
+}
+
+#table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(2, 2, 51);
+    color: white;
+    width: auto;
+}
+
+#table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#table {
+    font-family: arial, sans-serif;
+    font-size: small;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#table td,
+th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.center {
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+/* .column{
+    padding: 35px;
+} */

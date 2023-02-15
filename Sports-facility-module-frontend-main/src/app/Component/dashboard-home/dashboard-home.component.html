@@ -1,0 +1,69 @@
+
+
+    <div id="table" class="center">
+        <!-- <h2 style="text-align: center; margin-top: 20px; font-size: 150%; color: rgb(240, 236, 236);">User Detals</h2>
+        <div class="row">
+            <table id="Booking" class="center">
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Points</th>
+                </tr>
+            </table>
+        </div> -->
+        <div class="row" style="margin-right:100px">
+            <h2 style="text-align: center; margin-top: 20px; font-size: 150%; color: rgb(240, 236, 236);">Booking
+                Details</h2>
+            <table>
+                <tr>
+                    <th>Player Name</th>
+                    <th>Player ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Player DOB</th>
+                    <th>Facility ID</th>
+                    <th>Facility Name</th>
+                    <th>Facility Category</th>
+                    <th>Booking Date</th>
+                    <th>Staring Time</th>
+                    <th>Ending Time</th>
+                </tr>
+                <tr  *ngFor="let b of book,index as i">
+                    <th></th>
+                    <th>{{b.playerId}}</th>
+                    <th>Last Name</th>
+                    <th>Player DOB</th>
+                    <th>{{b.facilityId}}</th>
+                    <th>Facility Name</th>
+                    <th>Facility Category</th>
+                    <th>Booking Date</th>
+                    <th>Staring Time</th>
+                    <th>Ending Time</th>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <br>
+
+        <h2 style="text-align: center; margin-top: 20px; font-size: 150%; color: rgb(240, 236, 236);">Facility Details
+        </h2>
+        <div class="row" style="margin-right:100px">
+            <table>
+                <tr >
+                    <th>Facility ID</th>
+                    <th>Facility Name</th>
+                    <th>Facility Category</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                </tr>
+                <tr style="background-color: aliceblue;" *ngFor="let f of fac,index as i">
+                    <th>{{f.facilityId}}</th>
+                    <th>{{f.facilityName}}</th>
+                    <th>{{f.facilityCategory}}</th>
+                    <th>{{f.facilityStartTime}}</th>
+                    <th>{{f.facilityEndTime}}</th>
+                </tr>
+            </table>
+        </div>
+
+    </div>
